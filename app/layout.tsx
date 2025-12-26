@@ -26,6 +26,9 @@ import '../css/contact-modal.css'
 import '../css/legal-modal.css'
 import '../css/back-to-top.css'
 import '../css/contact-hero.css'
+import '../css/blog.css'
+import '../css/blog-single.css'
+import { Providers } from './providers'
 
 const urbanist = Urbanist({
   subsets: ['latin'],
@@ -99,7 +102,9 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
-      <body className={`${urbanist.variable} ${poppins.variable}`}>{children}</body>
+      <body className={`${urbanist.variable} ${poppins.variable}`}>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   )
 }
